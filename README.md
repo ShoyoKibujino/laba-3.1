@@ -7,13 +7,16 @@
 def split_numbers(*args):
     - list: отрицательные значения (отсортированы по убыванию);
     - list: неотрицательные значения (отсортированы по возрастанию).
+    
     otric = []
     neotric = []
+    
     for x in args:
         if x < 0:
             otric.append(x)
         else:
             neotric.append(x)
+            
     otric.sort(reverse=True)
     neotric.sort()
     return (otric, neotric)
